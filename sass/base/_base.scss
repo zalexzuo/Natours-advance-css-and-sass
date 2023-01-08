@@ -1,0 +1,18 @@
+/* reset, html, body ... */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* root font size */
+  // this defines size of 1rem
+}
+
+body {
+  box-sizing: border-box;
+}
