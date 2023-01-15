@@ -10,9 +10,31 @@
 
 html {
   font-size: 62.5%; /* root font size */
-  // this defines size of 1rem
+  // this defines size of 1rem ( 10px ) 16px = 62.5
+
+  // @include response(phone) {
+  //   font-size: 50%;
+  // }
+
+  // desktop first mediaQuery order: always the larger one before the smaller one
+  @include respond(tab-land) {
+    font-size: 56.25%; // let 1 rem equals to 9px, 9/16 =56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // let 1 rem equals to 8px, 8/16 =50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12px
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
